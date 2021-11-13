@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+	  
+	<!-- Ta bort kommentaren nedan för att aktivera standardanlyser: https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview#enabled-rules -->
+	<!--<EnableNETAnalyzers>true</EnableNETAnalyzers>-->
+	  
+  
+	<!--- Ta bort kommentaren nedan för att aktivera alla standardanalyser. -->
+	<!--<AnalysisMode>AllEnabledByDefault</AnalysisMode>-->
+  </PropertyGroup>
+
+</Project>
