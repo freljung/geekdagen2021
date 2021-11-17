@@ -35,7 +35,6 @@ dotnet_analyzer_diagnostic.severity = suggestion
 
 ```
 dotnet_analyzer_diagnostic.<category>.severity = suggestion
-
 ```
 
 #### Alla IDE-regler
