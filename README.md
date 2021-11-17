@@ -37,6 +37,13 @@ dotnet_analyzer_diagnostic.severity = suggestion
 dotnet_analyzer_diagnostic.<category>.severity = suggestion
 
 ```
+
+#### Alla IDE-regler
+
+```
+dotnet_analyzer_diagnostic.category-Style.severity = suggestion
+dotnet_analyzer_diagnostic.category-CodeQuality.severity = suggestion
+```
  
 ## Konfigurera specifika regler.
 
