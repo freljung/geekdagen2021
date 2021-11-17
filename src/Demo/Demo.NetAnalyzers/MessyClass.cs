@@ -8,7 +8,7 @@
     using System.Threading.Tasks;
     using Demo.NetAnalyzers.SomeOther.Namespace;
 
-    internal class MessyClass {
+    public class MessyClass {
 
         private bool someFlag;
         private readonly Int32? _someReadonlyValue;

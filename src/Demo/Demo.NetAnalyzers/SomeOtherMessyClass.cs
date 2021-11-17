@@ -7,29 +7,70 @@
     using System.Text;
     using System.Threading.Tasks;
 
-    public class SomeOtherMessyClass {
+    public class SomeOtherMessyClass
+    {
 
         private bool someFlag;
-        private readonly int _someReadonlyValue;
+        private readonly Int32? _someReadonlyValue;
+        private int? _aNullValue;
 
+        private readonly string _notUsed = string.Empty;
 
-        public const string SomeConstValue = "SomeConst";
+        public const String SomeConstValue = "SomeConst";
 
-        private void PrivateFunktion() {
-            someFlag = true;
+        int _value;
+        public int Value
+        {
+            get
+            {
+                return _value;
+            }
         }
 
-        public SomeOtherMessyClass() {
-            someFlag = false;
+        private void PrivateFunktion()
+        {
+            this.someFlag = true;
+        }
+
+        public SomeOtherMessyClass()
+        {
+            this.someFlag = false;
             _someReadonlyValue = 0;
         }
 
-        internal MessyClass? MessyClass { get; set; } = default(MessyClass);
+        public MessyClass? SomeOtherClass { get; set; } = default(MessyClass);
 
-        public void UsingCanBeSimplified() {
-            using (var disposable = new DisposableClass()) {
-                Console.WriteLine("Using kan förenklas.");
+        public void UsingCanBeSimplified()
+        {
+            using (var disposable = new DisposableClass())
+            {
+
+                if (someFlag)
+                    Console.WriteLine("Using kan förenklas.");
             }
+        }
+
+        public void PoorlySpacedMethod(string someString)
+        {
+
+
+            var location = "space";
+            var occupation = "scream";
+
+            if (string.IsNullOrEmpty(someString) && someFlag)
+
+            {
+
+                Console.WriteLine("In {0} no one can hear you {1}.", location, occupation);
+            }
+
+        }
+
+        public void Throw(int? input)
+        {
+            if (input == null)
+                throw new ArgumentNullException(nameof(input));
+            _aNullValue = input;
         }
     }
 }
