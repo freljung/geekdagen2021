@@ -25,6 +25,19 @@ Läs mer om AnalysysLevel på [docs.microsoft.com](https://docs.microsoft.com/en-u
 
 För .NET 5 så sätts analysnivån och läget med separat på ```<AnalysisLevel>``` och ```<AnalysisMode>```.
 
+### Konfigurera alla regler
+
+```
+dotnet_analyzer_diagnostic.severity = suggestion
+```
+
+### Konfigurera en kategori av regler
+
+```
+dotnet_analyzer_diagnostic.<category>.severity = suggestion
+
+```
+ 
 ## Konfigurera specifika regler.
 
 Specifika regler konfigureras i en .editorconfig-fil.
