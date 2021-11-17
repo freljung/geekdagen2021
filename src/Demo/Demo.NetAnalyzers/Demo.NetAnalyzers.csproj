@@ -4,10 +4,12 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>	  
-	<!--<AnalysisMode>AllEnabledByDefault</AnalysisMode>-->
+    <Nullable>enable</Nullable>
+	  
+	<!-- Modes: None, Default, Minimum, Recommended, All-->
+	<!--<AnalysisLevel>Latest-Default</AnalysisLevel>-->
 
-	<!--<TreatWarningsAsErrors>true</TreatWarningsAsErrors>-->
+	<!--<TreatWarningsAsErrors>false</TreatWarningsAsErrors>-->
     <!--<CodeAnalysisTreatWarningsAsErrors>false</CodeAnalysisTreatWarningsAsErrors>-->
   </PropertyGroup>
 

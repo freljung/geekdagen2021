@@ -1,4 +1,4 @@
-# Rules in this file were initially inferred by Visual Studio IntelliCode from the C:\src\github\geekdagen2021\src\Demo codebase based on best match to current usage at 2021-11-11
+# Rules in this file were initially inferred by Visual Studio IntelliCode from the C:\src\github\geekdagen2021\src\Demo codebase based on best match to current usage at 2021-11-14
 # You can modify the rules from these initially generated values to suit your own policies
 # You can learn more about editorconfig here: https://docs.microsoft.com/en-us/visualstudio/ide/editorconfig-code-style-settings-reference
 [*.cs]
@@ -8,15 +8,14 @@
 
 #use soft tabs (spaces) for indentation
 indent_style = space
+tab_width=4
+indent_size=4
 
-#Formatting - new line options
-
-dotnet_diagnostic.IDE0055.severity = silent
-
-#require braces to be on a new line for methods, control_blocks, and types (also known as "Allman" style)
-csharp_new_line_before_open_brace = methods, control_blocks, types
+# Sätt standard för alla Style-regler 
+dotnet_analyzer_diagnostic.category-Style.severity = silent
 
 #Formatting - organize using options
+# dotnet_diagnostic.IDE0055.severity = warning
 
 #sort System.* using directives alphabetically, and place them before other usings
 dotnet_sort_system_directives_first = true
@@ -24,33 +23,45 @@ dotnet_sort_system_directives_first = true
 #Formatting - spacing options
 
 #require NO space between a cast and the value
-csharp_space_after_cast = false
+csharp_space_after_cast =false
 #require a space before the colon for bases or interfaces in a type declaration
-csharp_space_after_colon_in_inheritance_clause = true
+csharp_space_after_colon_in_inheritance_clause =true
 #require a space after a keyword in a control flow statement such as a for loop
-csharp_space_after_keywords_in_control_flow_statements = true
+csharp_space_after_keywords_in_control_flow_statements =true
 #require a space before the colon for bases or interfaces in a type declaration
-csharp_space_before_colon_in_inheritance_clause = true
+csharp_space_before_colon_in_inheritance_clause =false
 #remove space within empty argument list parentheses
-csharp_space_between_method_call_empty_parameter_list_parentheses = false
+csharp_space_between_method_call_empty_parameter_list_parentheses =false
 #remove space between method call name and opening parenthesis
-csharp_space_between_method_call_name_and_opening_parenthesis = false
+csharp_space_between_method_call_name_and_opening_parenthesis =false
 #do not place space characters after the opening parenthesis and before the closing parenthesis of a method call
-csharp_space_between_method_call_parameter_list_parentheses = false
+csharp_space_between_method_call_parameter_list_parentheses =false
 #remove space within empty parameter list parentheses for a method declaration
-csharp_space_between_method_declaration_empty_parameter_list_parentheses = false
+csharp_space_between_method_declaration_empty_parameter_list_parentheses =false
 #place a space character after the opening parenthesis and before the closing parenthesis of a method declaration parameter list.
-csharp_space_between_method_declaration_parameter_list_parentheses = false
+csharp_space_between_method_declaration_parameter_list_parentheses =false
+
+#Formatting - wrapping options
+
+#leave code block on single line
+csharp_preserve_single_line_blocks =true
 
 #Style - Code block preferences
 
 #prefer curly braces even for one line of code
 csharp_prefer_braces = true:suggestion
 
+# Null-checking preferences
+# csharp_style_throw_expression = true:suggestion
+
 #Style - expression bodied member options
 
+#prefer block bodies for accessors
+csharp_style_expression_bodied_accessors = false:suggestion
 #prefer block bodies for methods
 csharp_style_expression_bodied_methods = false:suggestion
+#prefer block bodies for properties
+csharp_style_expression_bodied_properties = false:suggestion
 
 #Style - expression level options
 
@@ -66,8 +77,8 @@ csharp_prefer_simple_default_expression = true:suggestion
 
 #prefer var over explicit type in all cases, unless overridden by another code style rule
 csharp_style_var_elsewhere = true:suggestion
-#prefer explicit type over var to declare variables with built-in system types such as int
-csharp_style_var_for_built_in_types = false:suggestion
+#prefer var is used to declare variables with built-in system types such as int
+csharp_style_var_for_built_in_types = true:suggestion
 #prefer var when the type is already mentioned on the right-hand side of a declaration expression
 csharp_style_var_when_type_is_apparent = true:suggestion
 
@@ -84,7 +95,7 @@ dotnet_style_require_accessibility_modifiers = for_non_interface_members:suggest
 #Style - Modifier preferences
 
 #when this rule is set to a list of modifiers, prefer the specified ordering.
-csharp_preferred_modifier_order = public,private,internal,protected,override,virtual,abstract,static,readonly:suggestion
+csharp_preferred_modifier_order = public,private,internal,protected,override,virtual,readonly,abstract,static:suggestion
 
 #Style - qualification options
 
@@ -92,3 +103,42 @@ csharp_preferred_modifier_order = public,private,internal,protected,override,vir
 dotnet_style_qualification_for_field = false:suggestion
 #prefer methods not to be prefaced with this. or Me. in Visual Basic
 dotnet_style_qualification_for_method = false:suggestion
+csharp_indent_block_contents=true
+csharp_indent_braces=false
+csharp_indent_case_contents=true
+csharp_indent_case_contents_when_block=true
+csharp_indent_switch_labels=true
+csharp_indent_labels=one_less_than_current
+insert_final_newline=false
+csharp_new_line_before_open_brace=all
+csharp_new_line_before_else=true
+csharp_new_line_before_catch=true
+csharp_new_line_before_finally=true
+csharp_new_line_before_members_in_object_initializers=true
+csharp_new_line_before_members_in_anonymous_types=true
+csharp_new_line_between_query_expression_clauses=true
+csharp_space_between_method_declaration_name_and_open_parenthesis=false
+csharp_space_between_parentheses=false
+csharp_space_around_declaration_statements=false
+csharp_space_before_open_square_brackets=false
+csharp_space_between_empty_square_brackets=false
+csharp_space_between_square_brackets=false
+csharp_space_after_comma=true
+csharp_space_after_dot=false
+csharp_space_after_semicolon_in_for_statement=false
+csharp_space_before_comma=true
+csharp_space_before_dot=false
+csharp_space_before_semicolon_in_for_statement=false
+csharp_space_around_binary_operators=before_and_after
+csharp_preserve_single_line_statements=true
+
+[*.{cs,vb}]
+# Ska exempelvis && vara i slutet av en rad eller i början av en rad:
+# https://github.com/MicrosoftDocs/visualstudio-docs/issues/3641
+# if (true
+#     && true)
+# eller
+# if (true &&
+#     true)
+dotnet_style_operator_placement_when_wrapping=end_of_line
+end_of_line=crlf

@@ -11,10 +11,12 @@
     internal class MessyClass {
 
         private bool someFlag;
-        private readonly int _someReadonlyValue;
+        private readonly Int32? _someReadonlyValue;
+        private int? _aNullValue;
 
+        private readonly string _notUsed = string.Empty;
 
-        public const string SomeConstValue = "SomeConst";
+        public const String SomeConstValue = "SomeConst";
 
         int _value;
         public int Value {
@@ -24,11 +26,11 @@
         }
 
         private void PrivateFunktion() {
-            someFlag = true;
+            this.someFlag = true;
         }
 
         public MessyClass() {
-            someFlag = false;
+            this.someFlag = false;
             _someReadonlyValue = 0;
         }
 
@@ -53,6 +55,13 @@
                  Console.WriteLine( "In {0} no one can {1}" ,location ,  occupation);
             }
 
+        }
+
+        public void Throw(int? input)
+        {
+            if (input == null)
+                throw new ArgumentNullException(nameof(input));
+            _aNullValue = input;
         }
     }
 }
