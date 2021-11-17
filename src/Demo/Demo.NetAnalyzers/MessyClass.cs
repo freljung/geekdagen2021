@@ -38,7 +38,9 @@
 
         public void UsingCanBeSimplified() {
             using (var disposable = new DisposableClass()) {
-                Console.WriteLine("Using kan förenklas.");
+                
+                if (someFlag)
+                    Console.WriteLine("Using kan förenklas.");
             }
         }
 
@@ -48,11 +50,11 @@
             var  location = "space";
             var occupation= "scream";
 
-            if ( string.IsNullOrEmpty (someString))
+            if ( string.IsNullOrEmpty (someString) && someFlag)
 
             {
                 
-                 Console.WriteLine( "In {0} no one can {1}" ,location ,  occupation);
+                 Console.WriteLine( "In {0} no one can hear you {1}." ,location ,  occupation);
             }
 
         }
