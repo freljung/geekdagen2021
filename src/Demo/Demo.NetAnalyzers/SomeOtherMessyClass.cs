@@ -7,8 +7,7 @@
     using System.Text;
     using System.Threading.Tasks;
 
-    public class SomeOtherMessyClass
-    {
+    public class SomeOtherMessyClass {
 
         private bool someFlag;
         private readonly Int32? _someReadonlyValue;
@@ -19,49 +18,42 @@
         public const String SomeConstValue = "SomeConst";
 
         int _value;
-        public int Value
-        {
-            get
-            {
+        public int Value {
+            get {
                 return _value;
             }
         }
 
-        private void PrivateFunktion()
-        {
+        private void PrivateFunktion() {
             this.someFlag = true;
         }
 
-        public SomeOtherMessyClass()
-        {
+        public SomeOtherMessyClass() {
             this.someFlag = false;
             _someReadonlyValue = 0;
         }
 
-        public MessyClass? SomeOtherClass { get; set; } = default(MessyClass);
+        public MessyClass? MessyClass { get; set; } = default(MessyClass);
 
-        public void UsingCanBeSimplified()
-        {
-            using (var disposable = new DisposableClass())
-            {
-
+        public void UsingCanBeSimplified() {
+            using (var disposable = new DisposableClass()) {
+                
                 if (someFlag)
                     Console.WriteLine("Using kan förenklas.");
             }
         }
 
-        public void PoorlySpacedMethod(string someString)
-        {
+        public void  PoorlySpacedMethod ( string  someString ) {
 
 
-            var location = "space";
-            var occupation = "scream";
+            var  location = "space";
+            var occupation= "scream";
 
-            if (string.IsNullOrEmpty(someString) && someFlag)
+            if ( string.IsNullOrEmpty (someString) && someFlag)
 
             {
-
-                Console.WriteLine("In {0} no one can hear you {1}.", location, occupation);
+                
+                 Console.WriteLine( "In {0} no one can hear you {1}." ,location ,  occupation);
             }
 
         }
